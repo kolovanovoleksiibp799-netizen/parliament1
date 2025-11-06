@@ -22,7 +22,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain" />
+            <img src="/images/design-mode/ChatGPT%20Image%206%20%D0%BB%D0%B8%D1%81%D1%82.%202025%20%D1%80.%2C%2002_36_05.png" alt="Logo" className="object-contain leading-8 tracking-normal h-11 w-10" />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-foreground">{uk.header.title}</h1>
               <p className="text-xs text-muted-foreground">{uk.header.adminTitle}</p>
