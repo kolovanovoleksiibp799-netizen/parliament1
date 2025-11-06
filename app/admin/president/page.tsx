@@ -69,9 +69,30 @@ export default function PresidentManagement() {
     try {
       const supabase = createClient()
       if (president) {
-        await supabase.from("president").update(formData).eq("id", president.id)
+        const { error } = await supabase
+          .from("president")
+          .update({
+            name: formData.name,
+            bio: formData.bio,
+            telegram: formData.telegram,
+            discord: formData.discord,
+            image_url: formData.image_url,
+            official_start_date: formData.official_start_date,
+          })
+          .eq("id", president.id)
+
+        if (error) throw error
       } else {
-        await supabase.from("president").insert([formData])
+        await supabase.from("president").insert([
+          {
+            name: formData.name,
+            bio: formData.bio,
+            telegram: formData.telegram,
+            discord: formData.discord,
+            image_url: formData.image_url,
+            official_start_date: formData.official_start_date,
+          },
+        ])
       }
     } catch (error) {
       console.error("Error saving president info:", error)

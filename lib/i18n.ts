@@ -1,6 +1,7 @@
 export const uk = {
   header: {
-    title: "Адміністрація",
+    title: "Адміністрація президента",
+    adminTitle: "Адміністрація президента",
     subtitle: "Західна Україна",
     nav: {
       president: "Президент",
@@ -8,9 +9,10 @@ export const uk = {
       media: "Медіа",
       legislation: "Законодавство",
       tenders: "Тендери",
+      advocacy: "Адвокатура",
       enterprises: "Підприємства",
     },
-    adminLogin: "Вхід адміна",
+    adminLogin: "Вхід",
     register: "Реєстрація",
     logout: "Вийти",
   },
@@ -74,6 +76,8 @@ export const uk = {
     media: "Керування медіа",
     legislation: "Керування законодавством",
     tenders: "Керування тендерами",
+    advocacy: "Керування адвокатурою",
+    lectures: "Керування лекціями",
     enterprises: "Керування підприємствами",
     users: "Керування користувачами",
     proposals: "Керування пропозиціями",
@@ -172,5 +176,21 @@ export const uk = {
     proposed: "Запропоновано",
     passed: "Прийнято",
     rejected: "Відхилено",
+  },
+
+  advocacy: {
+    title: "Адвокатура",
+    description: "Офіційний реєстр адвокатів регіону",
+    advocates: "Адвокати",
+    lectures: "Лекції та семінари",
+    fullName: "Повне ім'я",
+    telegram: "Telegram",
+    licenseNumber: "Номер ліцензії",
+    topic: "Тема лекції",
+    content: "Вміст лекції",
+    date: "Дата",
+    lecturer: "Лектор",
+    noAdvocates: "Адвокатів поки немає",
+    noLectures: "Лекцій поки немає",
   },
 }

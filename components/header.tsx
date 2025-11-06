@@ -22,12 +22,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              02
-            </div>
+            <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain" />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-foreground">{uk.header.title}</h1>
-              <p className="text-xs text-muted-foreground">{uk.header.subtitle}</p>
+              <p className="text-xs text-muted-foreground">{uk.header.adminTitle}</p>
             </div>
           </Link>
 
@@ -47,6 +45,9 @@ export default function Header() {
             <Link href="/tenders" className="text-foreground hover:text-primary transition">
               {uk.header.nav.tenders}
             </Link>
+            <Link href="/advocacy" className="text-foreground hover:text-primary transition">
+              {uk.header.nav.advocacy}
+            </Link>
             <Link href="/enterprises" className="text-foreground hover:text-primary transition">
               {uk.header.nav.enterprises}
             </Link>
@@ -55,9 +56,6 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Button asChild variant="outline" size="sm">
               <Link href="/auth/login">{uk.header.adminLogin}</Link>
-            </Button>
-            <Button asChild size="sm">
-              <Link href="/auth/register">{uk.header.register}</Link>
             </Button>
           </div>
         </div>

@@ -79,7 +79,15 @@ export async function getTenderWithProposals(tenderId: string) {
     .from("tenders")
     .select(`
       *,
-      tender_proposals(*)
+      tender_proposals (
+        id,
+        proposer_name,
+        company_name,
+        company_type,
+        proposal_amount,
+        status,
+        created_at
+      )
     `)
     .eq("id", tenderId)
     .single()
@@ -90,5 +98,18 @@ export async function getTenderWithProposals(tenderId: string) {
 export async function getAllEnterprises() {
   const supabase = await createServerClient()
   const { data } = await supabase.from("enterprises").select("*").eq("status", "active")
+  return data || []
+}
+
+// Advocacy
+export async function getAllAdvocates() {
+  const supabase = await createServerClient()
+  const { data } = await supabase.from("advocates").select("*").order("full_name", { ascending: true })
+  return data || []
+}
+
+export async function getAllLectures() {
+  const supabase = await createServerClient()
+  const { data } = await supabase.from("lectures").select("*").order("created_at", { ascending: false })
   return data || []
 }

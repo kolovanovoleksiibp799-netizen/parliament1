@@ -74,6 +74,13 @@ async function AdminLayout({
             <Link href="/admin/tenders" className="block px-4 py-2 rounded hover:bg-accent text-foreground">
               {uk.management.tenders}
             </Link>
+            {/* Advocacy Management Section */}
+            <Link href="/admin/advocacy" className="block px-4 py-2 rounded hover:bg-accent text-foreground">
+              {uk.management.advocacy}
+            </Link>
+            <Link href="/admin/lectures" className="block px-4 py-2 rounded hover:bg-accent text-foreground">
+              {uk.management.lectures}
+            </Link>
             <Link href="/admin/enterprises" className="block px-4 py-2 rounded hover:bg-accent text-foreground">
               {uk.management.enterprises}
             </Link>

@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import Link from "next/link"
 import { uk } from "@/lib/i18n"
 
 export default function LoginPage() {
@@ -75,12 +74,6 @@ export default function LoginPage() {
                   <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? uk.auth.signingIn : uk.auth.signIn}
                   </Button>
-                  <div className="text-center text-sm">
-                    <span className="text-muted-foreground">{uk.auth.noAccount}</span>{" "}
-                    <Link href="/auth/register" className="text-primary hover:underline">
-                      {uk.auth.register}
-                    </Link>
-                  </div>
                 </div>
               </form>
             </CardContent>
